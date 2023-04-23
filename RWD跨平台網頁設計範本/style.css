@@ -1,0 +1,135 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #EAED63;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and(min-width:0px) {
+    #bivouac header .CommBox {
+        display: none;
+    }
+}
+
+#bivouac header {
+    display: flex;
+    height: 65px;
+    background-color: #F08A8C;
+    position: absolute;
+    z-index: 35;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+}
+
+#bivouac header #menu {
+    width: 12%;
+}
+
+#bivouac header #Logo {
+    width: 88%;
+    display: flex;
+}
+
+#bivouac header .ConnBox {
+    display: none;
+}
+
+#bivouac #PhoneMenu {
+    display: none;
+}
+
+#bivouac #main div {
+    width: 100%;
+    height: 70px;
+}
+
+#main nav .Items {
+    list-style-type: none;
+    width: 80%;
+}
+
+nav .Items li {
+    width: 100%;
+    height: 200px;
+    background-color: #6776E4;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    display: flex;
+    /*垂直軸-結尾*/
+    align-items: flex-end;
+    color: #FFF;
+}
+
+.Items li span {
+    width: 100%;
+    background-color: rgba(237, 150, 53, 0, 70);
+    display: block;
+    height: 50px;
+    display: flex;
+    /*水平軸-置中*/
+    justify-content: center;
+    /*垂直軸-置中*/
+    align-items: center;
+}
+
+.Items li a {
+    color: black;
+}
+
+nav .Items .One {
+    background-image: url(images/btn/001.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+nav .Items .Two {
+    background-image: url(images/btn/002.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+nav .Items .Three {
+    background-image: url(images/btn/003.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+nav .Items .Four {
+    background-image: url(images/btn/004.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+nav .Items .Five {
+    background-image: url(images/btn/005.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+nav .Items .Six {
+    background-image: url(images/btn/006.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+#bivouac #main footer {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media screen and (min-width:375px) {
+    body {
+        background-color: #3E7EEF;
+    }
+}

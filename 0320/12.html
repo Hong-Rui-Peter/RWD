@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+        /* 
+            內距：padding
+                padding: 全(上下左右皆相同內距)
+                padding: 上下 左右
+                padding: 上 左右 下
+                padding: 上 右 下 左
+                padding-top:
+                padding-right:
+                padding-bottom:
+                padding-left:
+                    1.當padding增加邊距，會讓內容變大，要讓它維持不變，要用box-sizing: border-box
+                    2.區塊元素可以利用padding撐開，但行內元素只能有效果，且撐開左右，但是撐不開上下
+
+            盒子設定大小方式：box-sizing
+                border-box：依照使用者設定為邊距
+                content-box：預設值，依照內容為邊距
+        */
+        .pa{
+            padding: 1em;
+            padding: 1em 5em;
+            padding: 1em 3em 10em;
+            padding: 1em 3em 5em 7em;
+            /* box-sizing: border-box; */
+        }
+        a{
+            background-color: #ffe4c47e;
+            padding: 10em;
+        }
+    </style>
+</head>
+<body>
+    <div class="pa">
+        溫州發出機器原本不怕氣息專區真實性服飾處理一陣長沙，實驗當天，搜尋引擎取消配套網路空中自然可用一項外觀廠家體會。
+    </div>
+    <br>
+    <div>
+        溫州發出機器原本不怕氣息專區真實性服飾處理一陣長沙，實驗當天，搜尋引擎取消配套網路空中自然可用一項外觀廠家體會。
+    </div>
+    <a href="#">ldk;sjfk;ljdslfkjdsakfjs</a>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            CSS基礎格式：
+                選擇器{屬性： 值；}
+            
+            CSS權重：
+                標籤(Element)： 1分
+                類別(Class)：   10分
+                id：            100分
+                行內式：        1000分
+                !important：    10000分
+        */
+        h1 {
+            color: red !important;
+            font-size: 50px;
+            font-family: sans-serif;
+        }
+
+        .text-blue {
+            color: blue;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        #app {
+            color: green;
+        }
+
+        .btn {
+            font-size: 20px;
+            margin: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 0.5em 2em;
+            background-color: darkblue;
+            color: #FFF;
+            text-decoration: none;
+            list-style: none;
+            box-shadow: 3px 3px 3px #888;
+            border: none;
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        .btn:active {
+            box-shadow: 3px 3px 3px #888 inset;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <h1 class="text-blue" id="app" style="color: yellow;">Hello</h1>
+    <h1>Hello</h1>
+    <h2 class="text-blue">World</h2>
+    <p>
+        出處面對輸入研究所，昨日論壇轉載知識保持經營許可證有些淡淡決策你的第二對不起，部落格，公路媽媽購買關注報名玻璃人間劇情印刷更好先進性轉身上述新型，鮮花抽菸區電視台出版社破壞審批醫生上述鎖定引起灌水，法人幫你逐步聽到別人記錄讓他結束是一種，自從更好更大存款照顧並不規律前後不敢靈魂媒體昨日，對此他就保證計劃頻道一點不如類別提出要去行為還會孤獨，情人車輛統計協調主義恐怖資金這位犯罪綜合行業，章節名稱受。
+    </p>
+    <a href="#" class="btn">超連結按鈕</a>
+    <button type="button" class="btn">按鈕的按鈕</button>
+    <p class="btn">段落按鈕</p>
+    <h2 class="btn">H2按鈕</h2>
+    <header class="btn">HEADER按鈕</header>
+</body>
+
+</html>

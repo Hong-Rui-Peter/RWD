@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        表單form
+            屬性：
+                action：傳送資料制後台頁面連結
+                method：傳輸方式：   get
+                                    post
+
+        輸入框：input
+            屬性：
+                type：輸入框的功能
+                name：輸入框名稱(後臺專用)
+                class：輸入框類別名稱(CSS樣式專用，Javascript也可以使用)
+                id：輸入框名稱(Javascript專用，CSS也可以使用)
+                placeholder：提示字元
+                value：設定輸入框的值
+                required：必填欄位
+                minlength：最小長度
+                maxlength：最大長度
+                min：最小值
+                max：最大值
+                step：區間
+                pattern：設定格式：[英文或數字區間]{數量}
+                readonly：唯讀
+
+            type屬性：
+                text：文字輸入框
+                submit：送出按鈕
+                password：密碼
+                number：輸入數值
+                tel：輸入電話
+                url：輸入網址
+                email：輸入E-mail
+                color：顏色選單
+                
+        按鈕：button (行內元素)
+            type屬性：
+                submit：送出按鈕
+                reset：清除按鈕
+                button：一般按鈕(無任何功能)
+
+            屬性：
+                disabled：關閉功能
+     -->
+
+
+    <form action="#" method="get">
+        <input type="text" name="user" placeholder="請輸入帳號"><br>
+        <input type="password" id="pass" name="pass" placeholder="請輸入密碼" minlength="8" maxlength="12">
+        <button type="button" id="look">O</button><br>
+        數量：<input type="number" name="num" min="12" max="144" step="12"><br>
+        <input type="text" name="id" placeholder="請輸入身分證字號" pattern="[A-Z]{1}[1-2]{1}[0-9]{8}" maxlength="10"><br>
+        <input type="tel" name="tel" placeholder="請輸入電話" pattern="[0]{1}[9]{1}[0-9]{8}" maxlength="10"><br>
+        <input type="url" name="url" placeholder="請輸入網址"><br>
+        <input type="email" name="mail" placeholder="請輸入Mail"><br>
+        <input type="url" name="MyUrl" id="myurl" value="https://www.bluer.com.tw" readonly>
+        <button type="button" id="copy">複製</button><br>
+        <input type="color" id="color"><br>
+        <input type="date" name="date" id=""><br>
+        <br>
+        <button type="button" disabled>按鈕</button>
+        <button type="reset">清除</button>
+        <button type="submit">送出</button>
+    </form>
+</body>
+</html>
+<script>
+    /* 檢查密碼功能 */
+    let look = document.getElementById("look");
+    let pass = document.getElementById("pass");
+    look.addEventListener("click",function(){
+        if(pass.getAttribute("type") == "password" || pass.getAttribute("type") == ""){
+            pass.setAttribute("type","text");
+            this.textContent = "X";
+        }else{
+            pass.setAttribute("type","password");
+            this.textContent = "O";
+        }
+    })
+
+    /* 複製功能 */
+    let myurl = document.getElementById("myurl");
+    let copy = document.getElementById("copy");
+    copy.addEventListener("click",function(){
+        myurl.select();
+        document.execCommand("copy");
+    })
+
+    /* 顏色選單 */
+    document.getElementById("color").addEventListener("change",function(){
+        document.getElementsByTagName("body")[0].style.backgroundColor = this.value;
+    })
+</script>

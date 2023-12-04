@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: sans-serif;
+        }
+        header{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            line-height: 80px;
+        }
+        header #logo{
+            width: 20%;
+            text-align: center;
+        }
+        header nav{
+            width: 80%;
+        }
+        header nav ul{
+            width: 100%;
+            text-align: right;
+            display: flex;
+            justify-content: end;
+        }
+        header nav ul li a{
+            display: block;
+            padding: 0 1em;
+        }
+        header nav ul li a:hover{
+            background-color: blue;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo"><h1>LOGO</h1></div>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

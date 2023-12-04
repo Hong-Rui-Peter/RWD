@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            CSS權重：
+                Elements(標籤)：    a、p、div       1分
+                Class類別：         .app、.btn      10分
+                Id名稱：            #app、#bpp      100分
+                行內式：            style="..."     1000分
+                !important                         10000分
+        */
+        #bpp{
+            color: blue;
+        }
+        h1{
+            color: red!important;
+        }
+        .app{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>1.我又推出強化十年演唱女朋友豐富可愛，說。</h1>
+    <h1 class="app">2.我又推出強化十年演唱女朋友豐富可愛，說。</h1>
+    <h1 class="app" id="bpp">3.我又推出強化十年演唱女朋友豐富可愛，說。</h1>
+    <h1 class="app" id="bpp" style="color: yellow;">4.我又推出強化十年演唱女朋友豐富可愛，說。</h1>
+</body>
+</html>

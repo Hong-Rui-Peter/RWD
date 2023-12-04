@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        表單：form
+            action：連結後臺網址
+            method：傳送資料給後台的方式
+                get：搜尋引擎用居多
+                post：傳送機密資料居多
+
+        輸入框：input
+            type屬性：
+                text：文字輸入框
+                password：密碼輸入框
+                number：輸入數值
+                date：輸入日期
+                email：E-MAIL
+                url：網址
+                tel：電話
+                color：顏色檢色器
+                range：滑桿
+                search：搜尋框
+                file：檔案上傳
+                radio：選單按鈕
+
+            屬性：
+                placeholder：提示字元
+                name：元素名稱，針對後台
+                class：類別名稱，CSS用的
+                id：元素名稱，Js用的
+                required：必填欄位
+                maxlength：最多字數
+                minlength：最少字數
+                max：最大值
+                min：最小值
+                step：值的級距
+                readonly：唯讀
+                hidden：隱藏欄位
+                checked：預選功能
+                
+            
+        元素類型：行內元素
+     -->
+    <form action="#" method="get">
+        <input type="text" name="user" placeholder="請輸入帳號" required><br>
+        <input type="password" name="password" id="ps" placeholder="請輸入密碼" maxlength="12" minlength="6"><button type="button" id="btn">檢查</button><br>
+        <input type="number" name="count" id="" class="" placeholder="請輸入數量" max="144" min="12" step="12"><br>
+        <input type="date" name="date" id=""><br>
+        <input type="email" name="email" id="" placeholder="請輸入MAIL"><br>
+        <input type="url" name="url" id="" placeholder="請輸入網址"><br>
+        <input type="tel：" name="tel：" id="" placeholder="請輸入電話" maxlength="10" minlength="6"><br>
+        <input type="email" name="" id="" value="sample@gmail.com" readonly><br>
+        <input type="text" name="test" value="test_A" hidden>
+        <input type="color" id="color"><br>
+        <input type="range" name="" id="range" min="6" max="32"><span id="val">0</span><br>
+        <p>他也畢竟將軍全部阿宅人民共和國，工作人員利潤家長隨時思維有時接收，新鮮好多技術男子一把後果你有出版。</p>
+        <input type="search"><br>
+        <input type="file"><br>
+        <label for="boy">
+            <input type="radio" name="sexy" id="boy" value="boy">男
+        </label>
+        <label for="girl">
+            <input type="radio" name="sexy" id="girl" value="girl">女
+        </label>
+        <br>
+        <label for="verygood">
+            <input type="radio" name="men" id="verygood" value="10" checked>非常滿意
+        </label>
+        <label for="good">
+            <input type="radio" name="men" id="good" value="5">滿意
+        </label>
+        <label for="soso">
+            <input type="radio" name="men" id="soso" value="0">普通
+        </label>
+        <label for="nogood">
+            <input type="radio" name="men" id="nogood" value="-5">不滿意
+        </label>
+        <label for="verynogood">
+            <input type="radio" name="men" id="verynogood" value="-10">非常不滿意
+        </label><br>
+
+        <label for="red">
+            <input type="checkbox" name="like" id="red" value="red">RED
+        </label>
+        <label for="green">
+            <input type="checkbox" name="like" id="green" value="green">GREEN
+        </label>
+        <label for="blue">
+            <input type="checkbox" name="like" id="blue" value="blue">BLUE
+        </label><br>
+        <select name="address" id="">
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="台南">台南</option>
+            <option value="台東">台東</option>
+        </select><br>
+        <textarea name="" id="" cols="30" rows="10" maxlength="100"></textarea>
+        <br>
+        <button type="submit">送出按鈕</button>
+    </form>
+</body>
+</html>
+<script>
+    // 檢查密碼
+    document.getElementById("btn").addEventListener("click",function(){
+        let ps = document.getElementById("ps");
+        if(ps.getAttribute("type") == "password"){
+            ps.setAttribute("type","text");
+            this.textContent = "關閉";
+        }else{
+            ps.setAttribute("type","password");
+            this.textContent = "檢查";
+        }
+    })
+
+    // 檢色器運用
+    let p = document.getElementsByTagName("p")[0];
+    document.getElementById("color").addEventListener("change",function(){
+        p.style.color = this.value;
+    })
+
+    //滑桿應用
+    document.getElementById("range").addEventListener("change",function(){
+        document.getElementById("val").textContent = this.value;
+        p.style.fontSize = this.value + "px";
+    })
+</script>

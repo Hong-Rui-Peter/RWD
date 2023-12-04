@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            插入背景顏色：background-color
+            插入背景圖片：background-image
+            背景圖片並列：background-repeat
+                            no-repeat：水平垂直皆不並列
+                            repeat：水平垂直皆並列
+                            repeat-x：水平並列
+                            repeat-y：垂直並列
+            背景圖大小：background-size
+                            contain：等比例縮放，填滿框架，但不會裁切圖片，所以不足處，會直接露白
+                            cover：等比例縮放，填滿框架，但會裁切圖片
+            背景圖片位置：background-position
+                            background-position:水平 垂直
+        */
+        div{
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+            background-image: url(https://picsum.photos/id/237/400/500);
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-size: cover;
+            background-position: center;
+            background-position: right bottom;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

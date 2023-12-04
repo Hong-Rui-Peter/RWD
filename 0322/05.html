@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            font-size: 0;
+            width: 400px;
+            padding: 20px;
+            margin: 100px auto;
+            font-family: sans-serif;
+            background-color: bisque;
+        }
+        .box input{
+            display: inline-block;
+            width: 100%;
+            height: 2em;
+            font-size: 20px;
+            text-align: center;
+            line-height: 2em;
+            margin: 0.2em;
+        }
+        .box button{
+            display: inline-block;
+            width: 100%;
+            height: 2em;
+            font-size: 20px;
+            text-align: center;
+            line-height: 2em;
+            margin: 0.2em;
+        }
+        .box h1{
+            font-size: 40px;
+            padding: 0.5em;
+            text-align: center;
+        }
+        .box h2{
+            font-size: 20px;
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>BMI檢測器</h1>
+        <input type="text" id="height" placeholder="請輸入身高(cm)">
+        <input type="text" id="weight" placeholder="請輸入體重(Kg)">
+        <button type="button" id="btn">送出</button>
+        <h2 id="realt"></h2>
+    </div>
+</body>
+</html>
+<script>
+    let h = document.getElementById("height");
+    let w = document.getElementById("weight");
+    document.getElementById("btn").addEventListener("click",function(){
+        let bmi = Number(w.value) / (Number(h.value) / 100)**2;
+        bmi = Math.round(bmi);
+        let x;
+        // if(isNaN(bmi)){
+        //     x = "輸入錯誤";
+        // }else if(bmi<=0 || bmi == Infinity){
+        //     x = "身高或體重，數值不可為零";
+        // }else if(bmi < 18){
+        //     x = "過瘦";
+        // }else if(bmi < 24){
+        //     x = "標準";
+        // }else if(bmi < 28){
+        //     x = "過重";
+        // }else if(bmi < 30){
+        //     x = "輕度肥胖";
+        // }else if(bmi < 34){
+        //     x = "中度肥胖";
+        // }else if(bmi >= 34){
+        //     x = "重度肥胖";
+        // }
+
+        switch(true){
+            case isNaN(bmi):
+                x = "輸入錯誤";
+                break;
+            case bmi<=0 || bmi == Infinity:
+                x = "身高或體重，數值不可為零";
+                break;
+            case bmi < 18:
+                x = "過瘦";
+                break;
+            case bmi < 24:
+                x = "標準";
+                break;
+            case bmi < 28:
+                x = "過重";
+                break;
+            case bmi < 30:
+                x = "輕度肥胖";
+                break;
+            case bmi < 34:
+                x = "中度肥胖";
+                break;
+            case bmi >= 34:
+                x = "重度肥胖";
+                break;
+            default:
+                x = "例外錯誤";
+        }
+        console.log(bmi)
+        let realt = document.getElementById("realt").textContent = x;
+        h.value = "";
+        w.value = "";
+
+    })
+</script>
